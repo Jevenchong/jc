@@ -19,15 +19,18 @@ function setup() {
   player = new Sprite(PLAYER_WIDTH*1.2, SCREEN_HEIGHT/2, PLAYER_WIDTH, PLAYER_HEIGHT, 'd');
   player.color = 'cyan';
   document.addEventListener("keydown", function(event) {
-      console.log("key pressed");
- if (event.code === 'ArrowUp') {
-player.vel.y = -20;
+     
+ if (event.code ==='Arrowup' & player.y >180) {
+player.vel.y = -5;
  }
-else  (event.code === 'ArrowDown')
-player.vel.y = 15;
+else if (event.code =='ArrowDown')
+player.vel.y =10;
+console.log("key pressed:")
 });
 
 document.addEventListener("keyup", function(event) {
+   
+
 if (event.code === 'ArrowUp') {
    player.vel.y = 0;
  }
@@ -36,6 +39,7 @@ else if (event.code === 'ArrowDown')
 player.vel.y = 0;
 });
 }
+
  
 
 
